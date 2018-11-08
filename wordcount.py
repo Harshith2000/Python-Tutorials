@@ -46,53 +46,53 @@ import sys
 # Then print_words() and print_top() can just call the utility function.
 
 
-dict={}
+final={}
 
-def print_words(s):
-  file=open(s,'r')
+def print_words(a):
+  file=open(a,'r')
   x=file.read()
   x=x.split()
   for i in range(len(x)):
-      if(x[i]!="*"):
-          countword=1
+      if(x[i]!="$"):
+          count=1
           for j in range(i+1,len(x)):
               if(x[i]==x[j]):
-                  countword+=1
-                  x[j]='*'
-          dict[x[i]]=countword
-          x[i]="*"
-  for k in dict:
-      print(k,dict[k])
+                  count+=1
+                  x[j]='$'
+          final[x[i]]=count
+          x[i]="$"
+  for k in final:
+      print(k,final[k])
 
 
-def print_top(s):
-    top={}
-    file = open(s, 'r')
+def print_top(a):
+    fin={}
+    file = open(a, 'r')
     x = file.read()
     x = x.split()
     for i in range(len(x)):
-        if (x[i] != "*"):
-            countword = 1
+        if (x[i] != "$"):
+            count = 1
             for j in range(i + 1, len(x)):
                 if (x[i] == x[j]):
-                    countword += 1
-                    x[j] = '*'
-            dict[x[i]] = countword
-            x[i] = "*"
+                    count += 1
+                    x[j] = '$'
+            final[x[i]] = count
+            x[i] = "$"
 
-    maxword=" "
+    m=" "
 
     for k in range(20):
-        maxi =0
-        for i in dict:
-            if int(dict[i]) > maxi:
-                maxi= int(dict[i])
-                maxword= i
-        top[maxword]=maxi
-        del dict[maxword]
+        ma =0
+        for i in final:
+            if int(final[i]) > ma:
+                ma= int(final[i])
+                m= i
+        fin[m]=ma
+        del final[m]
 
-    for k in top:
-        print(k,top[k])
+    for k in fin:
+        print(k,fin[k])
 
 ###
 
