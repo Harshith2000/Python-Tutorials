@@ -1,3 +1,4 @@
+#CODE BY SAIHARSHITH K R
 #Imagine an parking lot with 20 parking spaces, where each parking space has an ID which is a natural number, starting with 1, 2, 3, ….upto 20. Parking space '1' is the one closest to the entrance.
 #The parking space can be in three sizes: small(10 parking spaces), medium(7 parking spaces) and large slots(3 parking spaces).
 #Three types of vehicles are allowed to be parked in a parking space: motorcycle(small), car(medium) and bus(large)
